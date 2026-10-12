@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f2f3f1" />
+  <meta name="description" content="A thoughtfully designed reading workspace for the web." />
+  <title>Clarity — Your reading workspace</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6M19 5l-9 9M19 13v6H5V5h6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2ZM14 2v6h5M8 13h8M8 17h8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8 9 9 0 0 1-4-.9L3 20l1.9-5A8 8 0 1 1 20 11Z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.1 6.9L21 11l-6.9 2.1L12 20l-2.1-6.9L3 11l6.9-2.1L12 2ZM19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8L19 17Z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1ZM12 6v14"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-5L4 8M4 3v5h5M4 13a8 8 0 0 0 14 5l2-2M20 21v-5h-5"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14M10 11v6M14 11v6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 4-5 14 0 18M12 3c5 4 5 14 0 18"/></symbol>
+    <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M9 15a7 7 0 1 1 6 0l-1 3h-4l-1-3Z"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M3 4h18v14H8l-5 4V4ZM8 9h8M8 13h5"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 8-1l2-2a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-8 1l-2 2a5 5 0 0 0 7 7l2-2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+  </svg>
+
+  <div class="application">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-emblem"><svg><use href="#i-layers"/></svg></div><div><strong>clarity<span class="brand-dot">.</span></strong><small>READING STUDIO</small></div></div>
+      <div class="sidebar-section-label">YOUR SPACE</div>
+      <button class="side-link selected" id="homeBtn"><svg><use href="#i-panel"/></svg><span>Workspace</span><span class="side-active-dot"></span></button>
+      <button class="side-link" id="newBtn"><svg><use href="#i-plus"/></svg><span>New reading</span></button>
+      <div class="library-heading"><span>YOUR LIBRARY</span><span id="libraryCount" class="count-pill">0</span></div>
+      <label class="library-search"><svg><use href="#i-search"/></svg><input id="librarySearch" placeholder="Find an article..." aria-label="Search saved articles" /></label>
+      <nav id="libraryList" class="library-list" aria-label="Saved articles"><p class="library-empty">Your saved articles will appear here.</p></nav>
+      <div class="sidebar-bottom"><div class="sidebar-feature"><span class="mini-icon"><svg><use href="#i-spark"/></svg></span><strong>Make more of what you read.</strong><p>Find the essential ideas, save the details, and stay curious.</p></div><div class="sidebar-foot"><span class="presence-dot"></span> Personal reading space</div></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><button class="mobile-menu icon-button" id="menuBtn" aria-label="Open navigation"><svg><use href="#i-panel"/></svg></button><div class="breadcrumbs">Workspace <span>/</span> <strong>Discover</strong></div><div class="topbar-right"><span class="status-marker" id="apiStatus"><i></i> Checking workspace</span><div class="avatar">C</div></div></header>
+      <div class="main-inner">
+        <section class="hero" aria-label="Import an article"><div class="hero-sheen"></div><div class="hero-text"><span class="eyebrow"><span class="eyebrow-line"></span> YOUR PRIVATE READING COMPANION</span><h1>Find the meaning.<br><em>Skip the noise.</em></h1><p>Bring any article into focus. Uncover its key ideas, explore the full story, and ask better questions.</p></div><div class="hero-decoration" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="hero-mark">✦</div></div></section>
+
+        <section class="import-card"><div class="section-meta"><div><span class="section-kicker">START HERE</span><h2>Explore a webpage</h2></div><span class="input-helper"><svg><use href="#i-link"/></svg> Paste a public article link</span></div>
+          <form id="importForm" class="url-form"><span class="url-icon"><svg><use href="#i-globe"/></svg></span><input type="text" id="urlInput" inputmode="url" spellcheck="false" autocomplete="url" placeholder="https://example.com/a-story-worth-reading" aria-label="Website URL" required /><button class="primary-btn" id="importBtn" type="submit"><span>Explore article</span><svg><use href="#i-arrow"/></svg></button></form>
+          <div class="import-under"><span>One link. A more thoughtful read.</span><span id="importProgress" aria-live="polite"></span></div>
+        </section>
+
+        <div id="notice" role="status" aria-live="polite" class="notice hidden"></div>
+        <section id="emptyState" class="empty-state"><div class="empty-illustration"><div class="paper paper-behind"></div><div class="paper paper-front"><svg><use href="#i-file"/></svg><span></span><span></span><span></span></div><div class="empty-star">✦</div></div><div><span class="section-kicker">AN OPEN PAGE</span><h2>Every great insight<br>starts with a little curiosity.</h2><p>Paste a link above to create your first reading brief. Your articles, notes, and conversations will be right here.</p></div></section>
+
+        <section id="articleSpace" class="article-space hidden" aria-label="Selected article">
+          <div class="content-heading"><div><span class="section-kicker">YOUR READING DESK</span><h2>Now exploring <span class="decor-dot">✦</span></h2></div><div class="article-actions"><button class="soft-button" id="refreshBtn" title="Fetch this article again"><svg><use href="#i-refresh"/></svg><span>Refresh</span></button><button class="soft-button" id="exportBtn"><svg><use href="#i-download"/></svg><span>Export</span></button><button class="soft-button danger-button" id="deleteBtn" title="Remove article"><svg><use href="#i-trash"/></svg></button></div></div>
+          <article class="article-identity raised"><div class="article-label"><span class="green-dot"></span> SAVED TO YOUR LIBRARY</div><h3 id="articleTitle">Article title</h3><div class="article-meta"><span id="articleDomain"><svg><use href="#i-globe"/></svg> Source</span><span id="articleDate"><svg><use href="#i-calendar"/></svg> Publication date</span><span id="articleRead"><svg><use href="#i-clock"/></svg> Reading time</span><a id="articleLink" href="#" target="_blank" rel="noopener noreferrer" class="open-link">Visit original <svg><use href="#i-external"/></svg></a></div></article>
+          <div class="tab-row" role="tablist" aria-label="Reading tools"><button class="tab active" data-tab="overview" role="tab" aria-selected="true"><svg><use href="#i-spark"/></svg> Reading brief</button><button class="tab" data-tab="article" role="tab" aria-selected="false"><svg><use href="#i-book"/></svg> Full article</button><button class="tab" data-tab="chat" role="tab" aria-selected="false"><svg><use href="#i-chat"/></svg> Ask & explore</button></div>
+          <div class="tab-pane" id="pane-overview" role="tabpanel"><div class="overview-grid">
+            <div class="overview-main"><section class="brief-card raised"><div class="card-head"><div class="card-heading"><span class="square-icon coral-icon"><svg><use href="#i-file"/></svg></span><div><span class="section-kicker">THE BIG PICTURE</span><h3>Article at a glance</h3></div></div><div class="seg-switch" aria-label="Summary length"><button class="active" id="briefShort">Brief</button><button id="briefLong">In depth</button></div></div><div id="summaryText" class="text-body summary-body"><div class="placeholder-brief"><span class="placeholder-line w90"></span><span class="placeholder-line w100"></span><span class="placeholder-line w70"></span><p>Your article overview will appear here.</p></div></div></section>
+              <section class="brief-card raised"><div class="card-head"><div class="card-heading"><span class="square-icon aqua-icon"><svg><use href="#i-lightbulb"/></svg></span><div><span class="section-kicker">THE ESSENTIALS</span><h3>Key takeaways</h3></div></div><span class="head-caption">Ideas worth remembering</span></div><div id="keyPoints" class="points-content"><p class="muted-placeholder">Important ideas from this page will appear here.</p></div></section></div>
+            <aside class="overview-side"><section class="side-card raised"><div class="side-title"><svg><use href="#i-spark"/></svg> Reading intelligence</div><p>Go beyond the headline. Turn an entire page into a clear, organized perspective.</p><button class="accent-btn" id="generateBtn"><span>Prepare my brief</span><svg><use href="#i-arrow"/></svg></button><span class="side-note">Drawn from the article itself</span></section>
+              <section class="side-card raised"><div class="side-title"><svg><use href="#i-message"/></svg> Questions to explore</div><div id="suggestedQuestions" class="suggested-questions"><p class="muted-placeholder">Thoughtful prompts will appear after your brief is ready.</p></div></section>
+              <section class="side-card raised"><div class="side-title"><svg><use href="#i-layers"/></svg> Main topics</div><div id="keyTerms" class="term-list"><span class="topic-pill">Waiting for your brief</span></div></section>
+            </aside>
+          </div></div>
+          <div class="tab-pane hidden" id="pane-article" role="tabpanel"><section class="reading-card raised"><div class="card-head"><div class="card-heading"><span class="square-icon aqua-icon"><svg><use href="#i-book"/></svg></span><div><span class="section-kicker">ORIGINAL SOURCE</span><h3>The full story</h3></div></div><button class="soft-button" id="copyArticle"><svg><use href="#i-copy"/></svg> Copy text</button></div><div id="originalText" class="original-text"></div></section></div>
+          <div class="tab-pane hidden" id="pane-chat" role="tabpanel"><section class="chat-card raised"><div class="chat-top"><div class="card-heading"><span class="square-icon purple-icon"><svg><use href="#i-chat"/></svg></span><div><span class="section-kicker">GO A LITTLE DEEPER</span><h3>A conversation with your article</h3></div></div><button class="soft-button" id="clearChat"><svg><use href="#i-refresh"/></svg> New conversation</button></div><div id="chatMessages" class="chat-messages"><div class="chat-welcome"><div class="chat-welcome-icon"><svg><use href="#i-spark"/></svg></div><h3>What would you like to understand?</h3><p>Ask about details, claims, context, or conclusions. Responses are grounded in the article, with passages you can check.</p><div class="welcome-suggestions"><button data-prompt="What is the main argument of this article?">What is the main argument?</button><button data-prompt="What evidence does the article provide?">What evidence is provided?</button></div></div></div><form id="chatForm" class="chat-compose"><textarea id="questionInput" rows="1" placeholder="Ask anything about this article..." aria-label="Ask a question about the article"></textarea><button type="submit" id="sendBtn" class="send-button" aria-label="Send question"><svg><use href="#i-arrow"/></svg></button></form><div class="chat-disclaimer">Answers draw from this article. Verify significant details in the original source.</div></section></div>
+        </section>
+        <footer class="page-footer"><span>Clarity Reading Studio</span><span>Read with intention. Explore with confidence. ✦</span></footer>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
